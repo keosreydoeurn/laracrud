@@ -29,3 +29,24 @@ backend/vendor/
 frontend/node_modules/
 composer.lock
 package-lock.json
+# Storage cache files
+backend/storage/*.db
+backend/storage/*.sqlite
+backend/storage/*.sqlite-journal
+backend/storage/debugbar/
+backend/storage/framework/cache/
+backend/storage/framework/sessions/
+backend/storage/framework/views/
+backend/storage/logs/
+backend/storage/app/public/
+
+# Frontend build files
+frontend/dist/
+frontend/.vite/
+frontend/node_modules/
+
+# Composer and NPM
+backend/vendor/
+frontend/node_modules/
+composer.lock
+package-lock.json
