@@ -1,0 +1,12 @@
+# Environment files
+.env
+.env.*
+*.env
+*.env.*
+.env.bak
+.env.backup
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.*
+frontend/.env.local
