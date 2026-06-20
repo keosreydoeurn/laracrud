@@ -1,23 +1,15 @@
-# TODO - Make Laravel+Vue CRUD work
+# TODO
 
-## Step 1: Fix database config
-- [x] Hardcode `config/database.php` -> `connections.mysql` (host 127.0.0.1, port 3307, database laravel_vue_crud, username root).
-- [x] Run: `php artisan optimize:clear` (attempted earlier)
-- [x] Run: `php artisan config:clear`
-- [x] Run: `php artisan cache:clear`
+- [x] Update navbar link order so **Create Post** appears first (above Home/Posts).
+- [x] Add consistent per-page styling: introduce a common page header/container class in `frontend/src/style.css`.
+- [x] Add page-level markup/classes in each view:
+  - [x] HomeView
+  - [x] PostListView
+  - [x] CreatePostView
+  - [x] EditPostView
+  - [x] PostDetailView
+- [x] Add/adjust scoped styles in each view to ensure “style of each page” is distinct but consistent.
+- [ ] Run frontend build/dev checks (lint/build) to ensure no syntax errors.
 
-## Step 2: Test Database Connection
-- [x] Run: `php artisan tinker` and verified PDO connection.
-
-## Step 3: Run migrations
-- [x] Run: `php artisan migrate:fresh --force`
-
-## Step 4: Start dev servers
-- [ ] Run backend: `php artisan serve`
-- [ ] Run frontend: `npm run dev`
-
-## Step 5: Verify CRUD endpoints
-- [ ] Check browser loads `/`
-- [ ] Test create/update/delete from UI
-
+Note: npm build command failed due to shell parsing errors around `&&` in this environment.
 

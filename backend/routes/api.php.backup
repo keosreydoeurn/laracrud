@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\CategoryController;
+
+// Test route
+Route::get('/test', function() {
+    return response()->json([
+        'message' => 'API is working!',
+        'status' => 'success',
+        'timestamp' => now()
+    ]);
+});
+
+// Stats route
+Route::get('/stats', function() {
+    return response()->json([
+        'posts' => \App\Models\Post::count(),
+        'categories' => \App\Models\Category::count(),
+        'users' => \App\Models\User::count(),
+        'comments' => \App\Models\Comment::count(),
+    ]);
+});
+
+// Post routes
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/{id}', [PostController::class, 'show']);
+Route::post('/posts', [PostController::class, 'store']);
+Route::put('/posts/{id}', [PostController::class, 'update']);
+Route::delete('/posts/{id}', [PostController::class, 'destroy']);
+
+// Category routes
+Route::get('/categories', [CategoryController::class, 'index']);
+Route::post('/categories', [CategoryController::class, 'store']);
